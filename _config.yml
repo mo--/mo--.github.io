@@ -1,0 +1,13 @@
+# Site settings
+name: Mo0O
+title: Piece Of Brain
+email: steevechailloux@gmail.com
+description: "Mo0O's piece of brain, the place where I put some piece of my brain I want to share."
+baseurl: ""
+url: "https://github.com/WnP"
+twitter_name: 5733v3
+github_name: WnP
+
+# Build settings
+markdown: kramdown
+permalinks: pretty

@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "How to LVM -simple approach-"
+date:   2014-11-13 19:19:48
+categories: lvm server
+---
+
+This post aim to be a simple how to LVM
+
+## Physical Volume
+
+- `pvdisplay`: list physical volumes with attributes
+- `pvscan`: list physical volumes already created
+- `pvcreate`: creates the physical volume, example: `pvcreate /dev/vdb`
+
+## Volume Group
+
+- `vgdisplay`: lists the created volume groups
+- `vgcreate`: creates the volume group, example: `vgcreate VG_mo0o /dev/vdb # /dev/xxx`
+
+## Logical Volume
+
+- `lvdisplay`: list logical volumes with its attributes
+- `lvcreate`: creates the logical volume, example: `lvcreate -l 100%FREE -n LV_mo0o VG_mo0o` *will alocate the full Virtual Group size*
+
+# formating the new created volume
+
+- `mkfs.ext4 -L mo0o_main /dev/VG_mo0o/LV_mo0o`
+
+# Making some change
+
+## Rename Logical Volume
+
+- `lvrename /dev/VG_mo0o/LV_mo0o VG_mo0o/LV_files`: will rename `LV_mo0o` to `LV_files`
+
+## Reduce -shrink- the filesystem
+
+**Make a backup first!**
+
+This technique works with ext2, ext3, or ext4 file systems, make sure you know what you do before using `resize2fs`, USE IT AT YOUR OWN RISK!
+
+- `umount /dev/VG_mo0o/LV_files`: unmout to prevent damage
+- `fsck -f /dev/VG_mo0o/LV_files`: Check the filesystem
+- `resize2fs  /dev/VG_mo0o/LV_files 7680M`: resize -reduce|shrink- the filesystem to 7680M, you can have a progress bar usin `-p`
+
+Done! want to make a check? so:
+
+- `dumpe2fs -h /dev/VG_mo0o/LV_files`: `Block count` must be equal to the reported by resize2fs, you can multiply it by the `Block size` it reported and find the exact size in bytes. *1G=1024M, 1M=1024K and 1K=1024 bytes*
+
+you now need to resize the Logical Volume:
+
+- `lvreduce -L7680 /dev/VG_mo0o/LV_files`
+
+## Create a Logical Volume for a given size in the same Virtual Group
+
+context: I want a new logical volume of 7.5G
+
+- `lvcreate -l 64 -n LV_db VG_mo0o`
+- `lvextend -L7680 /dev/VG_mo0o/LV_db`
+
+## add some space to a Logical Volume
+
+context: we want to add 100M
+
+- `lvextend -L+100 /dev/VG_mo0o/LV_db`
