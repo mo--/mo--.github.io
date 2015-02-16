@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Mo0O's piece of brain, the place where I put some piece of my brain I want to share.
+Mo0O's notes, the place where I put thinks and works I want to share.
 
 Enjoy ;-)
