@@ -41,8 +41,6 @@ Sometimes you want to create a patch for a package, for example [st][st] configu
 
 This is exactly the `foobashrc`'s purpose, it's really easy to use and so powerful, you don't need to re-write the ebuild, it's so cool, all information is available on [funtoo foobashrc wiki][foobashrcwiki].
 
-to be removed
-
 [ebuild]: http://wiki.gentoo.org/wiki/Basic_guide_to_write_Gentoo_Ebuilds
 [emergewiki]: http://www.funtoo.org/Emerge
 [equerywiki]: http://wiki.gentoo.org/wiki/Equery
