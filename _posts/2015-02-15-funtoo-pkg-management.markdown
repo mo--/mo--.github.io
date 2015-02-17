@@ -7,9 +7,9 @@ categories: funtoo package
 
 ## Introduction
 
-Funtoo is really a great linux distribution, and is my new choice for those reasons:
+Funtoo is really a great linux distribution, and is my new choice for these reasons:
 
-- Compilation from source: it's more long than using binary packages but you can really feet you installation to your needs, not more, not less
+- Compilation from source: it's longer than using binary packages but you can really fit you installation to your needs, not more, not less
 - Gentoo based: like Gentoo but with a better portage tree
 - Not forced to use Systemd: Systemd could be a good choice, but imho the project is immature, also it does thinks I don't expect for an init system
 
