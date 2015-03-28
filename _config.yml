@@ -11,9 +11,3 @@ github_name: WnP
 # Build settings
 markdown: kramdown
 permalinks: pretty
-
-# Analytics
-analytics:
-    provider: google
-    google:
-        tracking_id: 'UA-61296913-1'
