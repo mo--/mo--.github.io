@@ -42,7 +42,8 @@ function addDarkness(ratio) {
             var color = document.defaultView.getComputedStyle(
                 elem, null).getPropertyValue('background-color');
 
-            // I want to change `code` and `pre` background colors for a special color
+            // I want to make some special background color for
+            // `code`, `pre` and transparent `body`
             tag = elem.tagName;
 
             // here is all the magic
@@ -50,10 +51,7 @@ function addDarkness(ratio) {
                 elem.style.background = "#999999";
             } else if (color != "transparent") {
                 elem.style.background = ColorLuminance(rgbTohex(color), ratio);
-            }
-
-            // special for transparent body
-            if (tag === "BODY" && color === "transparent") {
+            } else if (tag === "BODY" && color === "transparent") {
                 elem.style.background = "#cccccc";
             }
         }
