@@ -51,6 +51,11 @@ function addDarkness(ratio) {
             } else if (color != "transparent") {
                 elem.style.background = ColorLuminance(rgbTohex(color), ratio);
             }
+
+            // special for transparent body
+            if (tag === "BODY" && color === "transparent") {
+                elem.style.background = "#cccccc";
+            }
         }
         catch(err) { /* who cares? */ };
     }
