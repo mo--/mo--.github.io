@@ -136,7 +136,7 @@ clientLogger.info("${repoName} cloned to ${destinationFolder}")
 
 this is mostly the same script as `$GITBLIT_BASE_FOLDER/groovy/localclone.groovy` except I change the reposirory's owner to git, because I don't want users logging as root using ssh
 
-So save this script in `$GITBLIT_BASE_FOLDER/groovy/` and call from `post-receive scripts` in each projects receive preference that you want to be clone and accessible thru `go get`
+So save this script in `$GITBLIT_BASE_FOLDER/groovy/` and call it from `post-receive scripts` in each projects receive preference that you want to be clone and accessible thru `go get`
 
 Additionnaly I've made a symlink to `/srv/apps/git` in `/git` to avoid too long path
 
