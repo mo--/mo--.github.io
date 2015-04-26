@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Gitblit working with go get command"
-date:   2015-04-01 11:59:48
+date:   2015-04-26 12:59:48
 categories: git golang gitblit groovy
 ---
 
