@@ -146,4 +146,4 @@ To keep an eye on those repositories I've keep my hold `cgit` instance on it
 Sources:
 
 - [go documentation on import path](http://golang.org/cmd/go/#hdr-Remote_import_paths)
-- [git url.insteadOf usage - no official](https://coderwall.com/p/sitezg/force-git-to-clone-with-https-instead-of-git-urls)
+- [git url.insteadOf usage - not official](https://coderwall.com/p/sitezg/force-git-to-clone-with-https-instead-of-git-urls)
