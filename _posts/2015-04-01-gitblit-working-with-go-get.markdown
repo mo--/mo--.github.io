@@ -20,9 +20,7 @@ What required to make it work:
 simply set the git url to the gitblit one:
 
 {% highlight sh %}
-```
 git remote set-url origin ssh://username@domain.io:portnum/~ownername/project_name.git
-```
 {% endhighlight %}
 
 and you're done!
