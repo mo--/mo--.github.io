@@ -13,7 +13,7 @@ You can use the web UI, or create it using git CLI, to create it using the git C
 git push origin HEAD:refs/for/new
 {% endhighlight %}
 
-this will create a new ticket and return you some information about the ticket, as the ticket number and the ticket title -which should be your last commit message-
+this will create a new ticket and return you some information about the ticket, like the ticket number and the ticket title -which should be your last commit message-
 
 you could and some parameters:
 
@@ -50,7 +50,7 @@ In case you've made too much commit, you can rebase your branch in interactive m
 git rebase -i master
 {% endhighlight %}
 
-Choose your commits to squash, and eventualy fix you conflict -if there's some-
+Choose your commits to squash, and eventualy fix your conflict -if you have some-
 
 Once done push you change using:
 
