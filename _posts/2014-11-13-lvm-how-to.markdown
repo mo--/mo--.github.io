@@ -62,4 +62,4 @@ context: I want a new logical volume of 7.5G
 
 context: we want to add 100M
 
-- `lvextend -L+100 /dev/VG_mo0o/LV_db`
+- `lvextend -r -L+100 /dev/VG_mo0o/LV_db`
